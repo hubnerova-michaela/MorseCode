@@ -17,7 +17,7 @@ int main()
 
     while(true) {
 
-        MorseCode("MISA", led);
+        MorseCode("PETRMISASOS", led);
     }
 
     //metoda exit
