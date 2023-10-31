@@ -2,10 +2,8 @@
 #include <string>
 #include "mbed.h"
  
-#define MORSE_UNIT 200ms
 #define DOT 333ms
 #define LINE 1000ms
-#define MORSE_INTER 200ms
 #define PAUSE 333ms
 #define PAUSELONG 1000ms
  
@@ -13,16 +11,16 @@
 
 
 void Dot(DigitalOut led) {
-    led = 1;
-    ThisThread::sleep_for(DOT);
     led = 0;
+    ThisThread::sleep_for(DOT);
+    led = 1;
     ThisThread::sleep_for(PAUSE);
 }
 
 void Line(DigitalOut led) {
-    led = 1;
-    ThisThread::sleep_for(LINE);
     led = 0;
+    ThisThread::sleep_for(LINE);
+    led = 1;
     ThisThread::sleep_for(PAUSE);
 }
 

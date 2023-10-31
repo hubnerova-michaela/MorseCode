@@ -7,11 +7,17 @@
 #include <string>
 #include "morse.h"
 
+int init() {
+    return 0;
+} 
+
+int exit() {
+    return 0;
+}
 
 int main()
 {
-    //metoda init
-    // Initialise the digital pin LED0 as an output
+    init();  // Initialise the digital pin LED0 as an output
     DigitalOut led(LED1);
     led = 1;
 
@@ -20,6 +26,6 @@ int main()
         MorseCode("PETRMISASOS", led);
     }
 
-    //metoda exit
+    exit();
 
 }
